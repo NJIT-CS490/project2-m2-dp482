@@ -63,11 +63,11 @@ def on_new_address(data):
     
     db.session.add(models.Usps(data["address"]));
     
-    if data["address"] == "Hari:!! about":
-        text="Bot: Welcome to Text+ change your username to enjoy chatting";
+    if data["address"] == "!! about":
+        text="Bot: Welcome to Text+ ";
         db.session.add(models.Usps(text));
         
-    if data["address"] == "Hari:!! help":
+    if data["address"] == "!! help":
         text="Bot: Use different commands to explore (!! about, !! help, !! funtranslate)";
         db.session.add(models.Usps(text));
     
