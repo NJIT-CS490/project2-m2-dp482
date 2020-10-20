@@ -6,8 +6,8 @@ import { Content } from './Content';
 
 
 function handleSubmit(response) {
- 
-    // TODO replace with name from oauth
+  
+    let name = response.profileObj.name;
     Socket.emit('new address input', {
         'address': name,
     });
