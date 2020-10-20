@@ -44,7 +44,6 @@ export function Content() {
         <div>
             <h1>Welcome To Text+</h1>
             <h2><b> Total users: {UsersNumber}  </b></h2>
-            <p1>Attention! To explore chatbot (Username= Hari, Message = e.g !! about)</p1>
                 <ol>
                     {
                     addresses.map(

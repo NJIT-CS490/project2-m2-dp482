@@ -18,7 +18,6 @@ function handleSubmit(event) {
 export function Button() {
     return (
         <form onSubmit={handleSubmit}>
-            <p><b>Username: </b><input id="user_input" placeholder="Username"></input></p>
             <input id="message_input" placeholder="Enter a message"></input>
             <button> Send! </button>
         </form>

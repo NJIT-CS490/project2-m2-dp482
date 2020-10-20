@@ -25,13 +25,6 @@ ol {
     overflow: scroll;
 }
 
-p{
-    position: fixed;
-    left:370px;
-    bottom: 150px;
-    font-size:15pt;
-}
-
 input[id=user_input]{
     position: fixed;
     left:470px;
@@ -54,11 +47,4 @@ button{
   left:880px;
   bottom: 111px; 
   font-size:14pt;
-}
-
-p1{
-    position: fixed;
-    left:370px;
-    bottom: 60px;
-    font-size:15pt;
 }
