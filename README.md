@@ -24,11 +24,13 @@ Git clone part 1 of the project or copy the required files
 3) New terminal - cd to project and than (python app.py)
 4) Preview and check it
 
-- Add codes to link GoogleButton 
+- Add codes to link GoogleButton (Log in require to chat)
 1) scripts -> GoogleButton.jsx && scripts -> Content_Auth.jsx
 2) Update the code of the following files according to the requiremnets: (Button.jsx, python.py, Main.jsx, Content.jsx)
 
 !! Don't forget to add .gitignore (files in the folder = node_modules/  ,  package-lock.json , sql.env , __pycache__ )
+
+Add Procfile and Requirements.txt
 
 Design you app using HTML and CSS file.
 
@@ -46,7 +48,7 @@ Last Push the App to Heroku for everuone's access
 
 Technical Issues
 
-1) The first technical issue that I faced was getting the Google OAuth login page. The chat app was loading the chat before the user sign-in, and not only that, but the user was able to chat without logging in. I asked one of my graduate friends for help, and we were successfully able to solve the issue by adding React Dom and updating a few lines of code in three different files.
+1) The first technical issue that I faced was getting the Google OAuth login page. The chat app was loading the chat before the user sign-in, and not only that, but the user was able to chat without logging in. I asked one of my graduate friends for help, and we were successfully able to solve the issue by adding React Dom (render) and updating a few lines of code in three different files.
 
 2)	The second technical issue that I faced was getting the URL in a chat. If the user enters a URL it was not showing up on the chat display, but it was received by the server in AWS. I was successfully able to solve the issue by passing the function in the content file. Another small issue was the link was not clickable, and I solved that by looking it up on stack overflow.
 
