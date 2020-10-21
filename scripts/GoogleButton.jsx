@@ -7,12 +7,12 @@ import { Content } from './Content';
 
 function handleSubmit(response) {
   
-    let name = response.profileObj.name;
-    Socket.emit('new name', {
-        'address': name,
-    });
+   // let name = response.profileObj.name;
+   // Socket.emit('new name', {
+    //    'address': name,
+   // });
     
-    console.log('Sent the name ' + name + ' to server!');
+    //console.log('Sent the name ' + name + ' to server!');
     ReactDOM.render(<Content />, document.getElementById('content'));
 }
 
