@@ -1,6 +1,6 @@
 Git clone part 1 of the project or copy the required files 
 
-- React 
+- React Setup
 
 1) npm install
 2) sudo pip install flask-socketio
@@ -18,31 +18,31 @@ Git clone part 1 of the project or copy the required files
 4) Credentials -> + CREATE CREDENTIALS -> OAuth client ID
 5) Credentials -> Create Credentials -> OAuth client ID / Click "Web application"
 
-- Run part to make sure everything is working 
+- Run part 1 to make sure everything is working 
 1) sudo service postgresql start
 2) npm run watch 
-3) New terminal - cd to project and than (python app.py)
+3) New terminal - cd to project and then (python app.py)
 4) Preview and check it
 
-- Add codes to link GoogleButton (Log in require to chat)
+- Add codes to link GoogleButton (Login is required to chat)
 1) scripts -> GoogleButton.jsx && scripts -> Content_Auth.jsx
 2) Update the code of the following files according to the requiremnets: (Button.jsx, python.py, Main.jsx, Content.jsx)
 
 !! Don't forget to add .gitignore (files in the folder = node_modules/  ,  package-lock.json , sql.env , __pycache__ )
 
-Add Procfile and Requirements.txt
+(Add Procfile and Requirements.txt)
 
-Design you app using HTML and CSS file.
+Design your app using HTML and CSS file.
 
 Upload the Work to github
 1) git init
-2) git Stauts
+2) git Status
 3) git Add
 4) git commit -m ""
 5) git pull
 6) git push
 
-Last Push the App to Heroku for everuone's access
+Last Push the App to Heroku for everyone's access
 - heroku create
 - git push heroku main
 
@@ -59,7 +59,7 @@ Ways to Improve
 
 1)	If I had more time, I would use it on the part regarding the “Images are rendered inline”. I would have reached out to TA for help because I am not able to get that part done at all.
 
-2)	If I had more time, I would use it on overall styling and make the app more realistic to actual chatting apps.
+2)	If I had more time, I would use it on overall styling and make the app look more realistic to actual chatting apps.
 
 
 
