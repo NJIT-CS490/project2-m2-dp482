@@ -1,6 +1,4 @@
-    
 import * as React from 'react';
-
 
 import { Button } from './Button';
 import { Socket } from './Socket';
@@ -8,6 +6,7 @@ import { Socket } from './Socket';
 export function Content() {
     const [addresses, setAddresses] = React.useState([]);
     const [ UsersNumber, setUsersNumber] = React.useState([]);
+    const [ links, setLinks] = React.useState([]);
     
     function getNewAddresses() {
         React.useEffect(() => {
@@ -29,8 +28,7 @@ export function Content() {
     }
     getUsersNumberC();
     
-    
-     function getUsersNumberD() {
+    function getUsersNumberD() {
         React.useEffect(() => {
             Socket.on('disconnected', (data) => {
                 console.log("Received addresses from server for disconnect: " + data['test']);
@@ -39,7 +37,17 @@ export function Content() {
         });
     }
     getUsersNumberD();
-
+    
+    function getLinks() {
+        React.useEffect(() => {
+            Socket.on('new data', (data) => {
+                console.log("Received disconnected from server: " + data['test']);
+                setLinks(data['test']);
+            })
+        });
+    }
+    getLinks();
+    
     return (
         <div>
             <h1>Welcome To Text+</h1>
@@ -49,6 +57,13 @@ export function Content() {
                     addresses.map(
                         (address, index)=> 
                         <div key={index}>{address} </div>
+                        )
+                    }
+            
+                    {
+                    links.map(
+                        (test, index)=>
+                        <div key={index}><a href={test}>{test}</a></div>
                         )
                     }
                 </ol>
