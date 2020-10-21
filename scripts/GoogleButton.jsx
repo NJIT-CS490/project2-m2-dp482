@@ -12,7 +12,7 @@ function handleSubmit(response) {
     'address': username,
   });
     
-    //console.log('Sent the name ' + username + ' to server!');
+    console.log('Sent the name ' + username + ' to server!');
     ReactDOM.render(<Content />, document.getElementById('content'));
 }
 
