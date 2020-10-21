@@ -8,7 +8,7 @@ import { Content } from './Content';
 function handleSubmit(response) {
   
     let name = response.profileObj.name;
-    Socket.emit('new address input', {
+    Socket.emit('new name', {
         'address': name,
     });
     

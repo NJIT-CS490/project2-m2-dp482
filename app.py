@@ -83,6 +83,16 @@ def on_new_address(data):
     
     emit_all_addresses(ADDRESSES_RECEIVED_CHANNEL)
 
+
+@socketio.on('new name')
+def on_new_name(data):
+    print("Got new message input with data:", data)
+    
+    db.session.add(models.Usps(data["address"]));
+    db.session.commit();
+    
+    emit_all_addresses(ADDRESSES_RECEIVED_CHANNEL)
+
 @app.route('/')
 def index():
     emit_all_addresses(ADDRESSES_RECEIVED_CHANNEL)
