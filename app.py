@@ -5,6 +5,7 @@ import flask
 import flask_sqlalchemy
 import flask_socketio
 import models 
+import re
 
 ADDRESSES_RECEIVED_CHANNEL = 'addresses received'
 
@@ -23,7 +24,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = database_uri
 db = flask_sqlalchemy.SQLAlchemy(app)
 db.init_app(app)
 db.app = app
-
 
 db.create_all()
 db.session.commit()
@@ -71,7 +71,15 @@ def on_new_address(data):
         text="Bot: Use different commands to explore (!! about, !! help, !! funtranslate)";
         db.session.add(models.Usps(text));
     
+    info=data['address']
     db.session.commit();
+    
+    url=(re.findall("(?P<url>https?://[^\s]+)", info))
+    if (url):
+        click=url
+        socketio.emit('new data', {
+        'test': click
+    })
     
     emit_all_addresses(ADDRESSES_RECEIVED_CHANNEL)
 
