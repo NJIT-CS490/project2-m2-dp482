@@ -3,9 +3,8 @@ import { Socket } from './Socket';
 
 function handleSubmit(event) {
     let newMessage = document.getElementById("message_input");
-    let newUsername = document.getElementById("user_input");
     Socket.emit('new address input', {
-       'address': newUsername.value + ':' +newMessage.value+'',
+       'address': newMessage.value,
     });
     newMessage.value
     
