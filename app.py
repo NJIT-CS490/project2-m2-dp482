@@ -84,7 +84,7 @@ def on_new_address(data):
     emit_all_addresses(ADDRESSES_RECEIVED_CHANNEL)
 
 
-@socketio.on('new name')
+@socketio.on('new username')
 def on_new_name(data):
     print("Got new message input with data:", data)
     
