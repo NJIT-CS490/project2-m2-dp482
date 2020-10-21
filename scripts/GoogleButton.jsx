@@ -6,11 +6,11 @@ import { Content } from './Content';
 
 
 function handleSubmit(response) {
-  
-   let username = response.profileObj.name;
-    Socket.emit('new username', {
-        'address': username,
-    });
+  console.log(response)
+  let username = response.profileObj.name;
+  Socket.emit('new username', {
+    'address': username,
+  });
     
     console.log('Sent the name ' + username + ' to server!');
     ReactDOM.render(<Content />, document.getElementById('content'));
